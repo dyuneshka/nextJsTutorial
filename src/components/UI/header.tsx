@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site.config";
+import { layoutConfig } from "@/config/layout.config";
 
 export const Logo = () => {
   return (
@@ -48,7 +49,7 @@ export default function Header() {
   };
 
   return (
-    <Navbar>
+    <Navbar style={{ height: `${layoutConfig.headerHeigth}` }}>
       <NavbarBrand>
         <Link href="/" className="flex gap-2">
           <Logo />
